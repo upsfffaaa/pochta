@@ -1,0 +1,47 @@
+﻿<Window x:Class="GmailClient.NewMessageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GmailClient"
+        mc:Ignorable="d"
+        Title="New message"
+        Height="450" Width="800"
+        MinHeight="350" MinWidth="400"
+        Background="#E6ECF0"
+        >
+	<Grid Margin="20">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="40"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+		<TextBlock Text="New Message" FontSize="24" Margin="0 10 0 0"/>
+
+		<TextBox Name="txtboxToWhom" Grid.Row="1" VerticalAlignment="Top"
+            Style="{StaticResource MaterialDesignFilledTextBox}" Margin="0 10 0 0"
+            />
+
+		<TextBox Name="txtboxTheme" Grid.Row="2" VerticalAlignment="Top"
+           Style="{StaticResource MaterialDesignFilledTextBox}" Margin="0 10 0 0"
+           />
+
+		<TextBox Name="txtboxFromWhom" Grid.Row="3" VerticalAlignment="Top"
+           Style="{StaticResource MaterialDesignFilledTextBox}" Margin="0 10 0 0"
+           />
+
+		<TextBox Name="txtboxBody" Grid.Row="4" Margin="0 10 0 0"
+           AcceptsReturn="True" Height="150" Width="Auto"
+           Style="{StaticResource MaterialDesignFilledTextBox}"
+           />
+
+		<Button Name="button_Send" Grid.Row="5" Width="100" HorizontalAlignment="Right"
+            Style="{StaticResource MaterialDesignRaisedAccentButton}" Margin="0 20 0 0"
+            Click="button_Send_Click" Content="Send" BorderBrush="#FF673AB7" Background="#FF673AB7" Foreground="#DDFFFFFF"/>
+
+	</Grid>
+</Window>
